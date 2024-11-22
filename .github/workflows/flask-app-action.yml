@@ -1,12 +1,13 @@
-name: Python CI
+name: flask-app-action
 
 on:
-  push:
-    branches:
-      - main  # Запуск при пуші в гілку main
   pull_request:
-    branches:
-      - main  # Запуск при створенні pull request до main
+    types:
+      - labeled  # Запуск workflow, коли додається мітка
+    labels:
+      - 'run-tests'  # Назва мітки, при якій буде запускатися тестування
+
+
 
 jobs:
   test:
