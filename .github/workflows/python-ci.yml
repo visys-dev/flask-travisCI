@@ -32,4 +32,4 @@ jobs:
 
     - name: Run tests
       run: |
-        python -m pytest test/*  # Запуск тестів у папці test/
+        python -m pytest tests/*  # Запуск тестів у папці test/
