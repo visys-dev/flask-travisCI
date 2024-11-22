@@ -1,11 +1,10 @@
 name: flask-app-action
 
 on:
-  pull_request:
-    types:
-      - labeled  # Запуск workflow, коли додається мітка
-    labels:
-      - 'run-tests'  # Назва мітки, при якій буде запускатися тестування
+  push:
+    tags:
+      - "*-run-test"  # Запуск на теги, що закінчуються на '-run-test'
+
 
 
 
